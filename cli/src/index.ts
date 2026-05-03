@@ -19,6 +19,7 @@ import { editCommand } from "./commands/edit.js";
 import { commentCommand } from "./commands/comment.js";
 import { rmCommand } from "./commands/rm.js";
 import { ralphCommand } from "./commands/ralph.js";
+import { makeCommand } from "./commands/make.js";
 
 const program = new Command();
 
@@ -150,6 +151,18 @@ program
   .option("--board <ref>", "Override default board")
   .option("--json", "Output as JSON")
   .action(rmCommand);
+
+// Board creation
+program
+  .command("make")
+  .description("Create a new board")
+  .argument("<name>", "Board name")
+  .option("-d, --description <desc>", "Board description")
+  .option("-c, --column <name>", "Column name (repeatable; defaults to To Do, In Progress, Done)")
+  .option("--open", "Allow anyone to create cards and comments")
+  .option("--no-default", "Don't set the new board as default")
+  .option("--json", "Output as JSON")
+  .action(makeCommand);
 
 // Autonomous dev loop
 ralphCommand(program);

@@ -12,6 +12,7 @@ npm install -g skyboard-cli
 
 ```bash
 sb login alice.bsky.social    # opens browser for AT Protocol OAuth
+sb make "Sprint Board"        # create a new board
 sb boards                     # list your boards
 sb use "Sprint Board"         # set default board
 sb cards                      # view all cards
@@ -36,6 +37,7 @@ sb logout                     # clear stored session
 | Command          | Description                               |
 | ---------------- | ----------------------------------------- |
 | `sb boards`      | List all boards (owned + joined)          |
+| `sb make <name>` | Create a new board                        |
 | `sb use <board>` | Set default board for subsequent commands |
 | `sb add <link>`  | Join a board by AT URI or web URL         |
 | `sb cols`        | Show columns with task counts             |
