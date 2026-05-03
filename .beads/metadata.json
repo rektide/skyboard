@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "skyboard",
+  "project_id": "c6cf64b8-e88b-44e6-ac3e-830bdfbcbc78"
+}
